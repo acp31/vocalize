@@ -1,0 +1,16 @@
+{
+  "name": "webserver",
+  "version": "1.0.0",
+  "description": "simple web server",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "*",
+    "express": "*"
+    },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Aaron Phillips",
+  "license": "ISC"
+}
