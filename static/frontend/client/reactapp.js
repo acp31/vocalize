@@ -18,12 +18,16 @@ var PercentCorrect = React.createClass({
       );
   }
 });
+
 var OptionButtons = React.createClass({
+  startRecording: function(){
+    recording = true;
+  },
    render: function(){
     return (
       <div className="options">
         <button type="button" className="choices sound"><i className="icon ion-volume-high"></i></button>
-        <button type="button" className="choices mircophone"><i className="icon ion-mic-a"></i></button>
+        <button type="button" className="choices mircophone" onClick={this.startRecording}><i className="icon ion-mic-a"></i></button>
       </div>
       );
   }
@@ -55,7 +59,7 @@ var Instructions = React.createClass({
   render: function(){
     return (
       <div>
-      <h3>Click the mircophone button and pronounce the word shown below</h3>
+      <h3>Click the microphone button and pronounce the word shown below</h3>
       </div>
       );
   }
