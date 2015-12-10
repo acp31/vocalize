@@ -1,4 +1,3 @@
-
 var NextWord = React.createClass({
   render: function(){
     return (
@@ -18,16 +17,12 @@ var PercentCorrect = React.createClass({
       );
   }
 });
-
 var OptionButtons = React.createClass({
-  startRecording: function(){
-    recording = true;
-  },
    render: function(){
     return (
       <div className="options">
         <button type="button" className="choices sound"><i className="icon ion-volume-high"></i></button>
-        <button type="button" className="choices mircophone" onClick={this.startRecording}><i className="icon ion-mic-a"></i></button>
+        <button type="button" className="choices mircophone" onClick={window.startRecording}><i className="icon ion-mic-a"></i></button>
       </div>
       );
   }

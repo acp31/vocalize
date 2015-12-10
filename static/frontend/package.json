@@ -1,14 +1,13 @@
 {
   "name": "webserver",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "Simple pronouciation testing",
   "main": "server.js",
   "dependencies": {
-    "binaryjs": "latest",
+    "binaryjs": "*",
     "body-parser": "*",
     "express": "*",
-    "jade": "latest",
-    "wav": "latest"
+    "wav": "*"
     },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

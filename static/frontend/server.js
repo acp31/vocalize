@@ -10,9 +10,7 @@ var app = express();
 
 //setting the port
 app.set('port', (process.env.PORT || 3700));
-app.set('views', __dirname + '/client');
-app.set('view engine', 'jade');
-app.engine('jade', require('jade').__express);
+app.set('views', __dirname + 'client');
 
 //Setting the static path
 app.use(express.static(path.join(__dirname, 'client')));
@@ -20,6 +18,10 @@ app.use(express.static(path.join(__dirname, 'client')));
 //BodyParser Middleware
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
+
+app.get('/', function(req, res){
+  res.render('index');
+});
 
 //Starting the server
 app.listen(app.get('port'), function(){
