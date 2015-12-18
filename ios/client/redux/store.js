@@ -1,12 +1,14 @@
-import {compose, createStore, applyMiddleware } from 'redux';
+import { createStore, applyMiddleware } from 'redux';
 
 import vocalizeReducer form './reducer';
-import thunk from 'redux-thunk';
+import thunkMiddleware from 'redux-thunk';
 
-const createStoreWithMiddleware = applyMiddleware(thunk)(createStore);
-
-
-const store = createStoreWithMiddleware(vocalizeReducer, initialState);
+const createStoreWithMiddleware = applyMiddleware(thunkMiddleware)(createStore);
 
 
+export default function configureStore(initialState){
 
+  const store = createStoreWithMiddleware(vocalizeReducer, initialState);
+
+  return store;
+}

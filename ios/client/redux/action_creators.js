@@ -12,34 +12,6 @@ export function setState(state){//x
 }
 
 
-function playWord(word){//x
-  return {
-    type: types.PLAY_WORD,
-    data: word,
-  }
-}
-
-function recordUserAudio(word){//x
-  return {
-    type: types.RECORD_USER_AUDIO,
-    word,
-  }
-}
-
-function stopUserRecording(word){//x
-  return {
-    type: types.STOP_RECORDING_USER_AUDIO,
-    word,
-  }
-}
-
-function sendUserRecording(word){//x
-  return {
-    type: types.SEND_RECORDING_USER_AUDIO,
-    word,
-  }
-}
-
 function receiveNewWord(json) {
   return{
     type: types.RECEIVE_NEW_WORD,
@@ -91,31 +63,8 @@ export function setInitalState(){
 
 
 
-export function stop(soundBlob){
-  
-}
-
-
-
-export function play(){
- AudioPlayer.playWithUrl()
-}
-
-
 export function postWord(){
-  
 }
-
-export function record(){
-
-
-}
-
-
-
-
-
-
 
 
 
